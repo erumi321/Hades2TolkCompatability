@@ -4,8 +4,8 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "erumi321"
-name = "Hades_2_TOLk_Compatability"
-versionNumber = "0.1.0"
+name = "Hades_2_TOLk_Compatibility"
+versionNumber = "0.1.1"
 description = "Integrates TOLk screen-reader into Hades 2"
 websiteUrl = "https://github.com/erumi321/Hades2TolkCompatability"
 containsNsfwContent = false
