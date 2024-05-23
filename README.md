@@ -10,4 +10,3 @@ Hades II mod which is a dependency of accessibility mods, using H2M we implement
 ## Install
 
 - Download off of thunderstore
-

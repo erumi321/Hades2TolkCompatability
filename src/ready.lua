@@ -150,7 +150,6 @@ OnMouseOver{
 			for i = 1, #lines do
 				local line = lines[i]
 				if line:sub(0,1) ~= "@" then
-					print(line)
 					rom.tolk.output(line)
 				else
 					local ending = ""
