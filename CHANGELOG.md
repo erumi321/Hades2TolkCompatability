@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- First version of the mod!
+- Added TOLk reader and icon replacement
 
 [unreleased]: https://github.com/erumi321/Hades2TolkCompatability/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/erumi321/Hades2TolkCompatability/compare/908cb84847b083f158c21f72478be02ff37a6548...0.1.0
