@@ -1,4 +1,4 @@
-# Hades 2 TOLk Compatability
+# Hades 2 TOLk Compatibility
 
 Hades II mod which is a dependency of accessibility mods, using H2M we implement a screen reader through TOLk, one which replaces many of the icons in the game with the text they actually represent.
 
