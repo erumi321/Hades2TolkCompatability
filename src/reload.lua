@@ -5,6 +5,7 @@
 -- this file will be reloaded if it changes during gameplay,
 -- 	so only assign to values or define things here.
 
+
 local IconNameToTextId = {
 	["Currency"] = "Money",
 	["MoneyDrop_Text"] = "Money",
@@ -138,21 +139,34 @@ function OnMouseOverTrigger(triggerArgs)
     if button.Id then
         local lines = rom.tolk.get_lines_from_thing(button.Id)
         rom.tolk.silence()
-        local collection = ""
-        for i = 1, #lines do
-            local line = lines[i]
-            if line:sub(0,1) ~= "@" then
-                collection = collection .. " " .. line
-            else
-                local ending = ""
-                for k in line:gmatch("[^/]+") do
-                    ending = k
-                end
-                local outputText = GetDisplayName({Text=IconNameToTextId[ending]}):gsub("{[^}]+}", "")
-                collection = collection .. " " .. outputText
-            end
-        end
+
+		local collection = createCollection(lines)
 
         rom.tolk.output(collection)
     end
+end
+
+function tolk_OnButtonHover(lines)
+	rom.tolk.silence()
+	local collection = createCollection(lines)
+	rom.tolk.output(collection)
+end
+
+function createCollection(lines)
+	local collection = ""
+	for i = 1, #lines do
+		local line = lines[i]
+		if line:sub(0,1) ~= "@" then
+			collection = collection .. " " .. line
+		else
+			local ending = ""
+			for k in line:gmatch("[^/]+") do
+				ending = k
+			end
+			local outputText = GetDisplayName({Text=IconNameToTextId[ending]}):gsub("{[^}]+}", "")
+			collection = collection .. " " .. outputText
+		end
+	end
+
+	return collection
 end

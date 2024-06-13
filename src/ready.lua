@@ -7,12 +7,9 @@
 -- 	so you will most likely want to have it reference
 --	values and functions later defined in `reload.lua`.
 
--- rom.tolk.on_button_hover(function(lines)
--- 	rom.tolk.silence()
--- 	for i = 1, #lines do
--- 		rom.tolk.output(lines[i])
--- 	end
--- end)
+rom.tolk.on_button_hover(function(lines)
+	tolk_OnButtonHover(lines)
+end)
 
 OnMouseOver{
 	function( triggerArgs )
