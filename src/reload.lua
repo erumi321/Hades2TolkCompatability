@@ -116,6 +116,7 @@ local IconNameToTextId = {
 	["OreFSilver_Text"] = "OreFSilver_Short",
 	["MetaFabric_Text"] = "MetaFabric",
 	["Mixer5Common_Text"] = "Mixer5Common",
+	["MixerShadow"] = "MixerShadow_Short",
 	["CardUpgradePoints_Text"] = "CardUpgradePoints",
 	["FamiliarPoints_Text"] = "FamiliarPoints",
 	["PlantFNightshade_Text"] = "PlantFNightshade",
@@ -157,13 +158,13 @@ function createCollection(lines)
 	for i = 1, #lines do
 		local line = lines[i]
 		if line:sub(0,1) ~= "@" then
-			collection = collection .. " " .. line
+			collection = collection .. " " .. line:gsub("%(s%)", "s")
 		else
 			local ending = ""
 			for k in line:gmatch("[^/]+") do
 				ending = k
 			end
-			local outputText = GetDisplayName({Text=IconNameToTextId[ending]}):gsub("{[^}]+}", "")
+			local outputText = GetDisplayName({Text=IconNameToTextId[ending]}):gsub("{[^}]+}", ""):gsub("%(s%)", "s")
 			collection = collection .. " " .. outputText
 		end
 	end

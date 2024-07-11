@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- (s) now just reads as s, shortening time to read some phrases
+
 ## [1.0.1] - 2024-06-13
 
 ### Added
